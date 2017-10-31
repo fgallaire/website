@@ -17,8 +17,8 @@ git clone https://github.com/txt2tags/doc
 #  -and -not -path './doc/*' \
 #  -exec txt2tags -t html {} \;
 for file in `find . -name "*.t2t" | xargs`; do
-    ./txt2tags -t html $file
- #   ./txt2tags0 -t html $file
+ #   ./txt2tags -t html $file
+    ./txt2tags0 -t html $file
  #   ./txt2tags1 -t html $file
  #   ./txt2tags2 -t html $file
  #   ./txt2tags3 -t html $file
