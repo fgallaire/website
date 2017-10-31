@@ -8,6 +8,11 @@ git clone https://github.com/txt2tags/doc
 # 1) some files in doc don't have target configured
 # 2) some files in doc fail to build, the loop seems to protect the global build
 
-for file in `find . -name "*.t2t" | xargs`; do
-    ./txt2tagslite --chars=unicode -t aatw $file
-done
+#for file in `find . -name "*.t2t" | xargs`; do
+#　   ./txt2tagslite --chars=unicode -t aatw $file
+#done
+
+find . -name '*.t2t' \
+  -and -not -path './inc/*' \
+#  -and -not -path './doc/*' \
+  -exec txt2tags {} \;
