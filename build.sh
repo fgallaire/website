@@ -15,4 +15,4 @@ git clone https://github.com/txt2tags/doc
 find . -name '*.t2t' \
   -and -not -path './inc/*' \
 #  -and -not -path './doc/*' \
-  -exec txt2tags {} \;
+  -exec txt2tags -t html {} \;
