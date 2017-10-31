@@ -12,7 +12,10 @@ git clone https://github.com/txt2tags/doc
 #　   ./txt2tagslite --chars=unicode -t aatw $file
 #done
 
-find . -name '*.t2t' \
-  -and -not -path './inc/*' \
+#find . -name '*.t2t' \
+#  -and -not -path './inc/*' \
 #  -and -not -path './doc/*' \
-  -exec txt2tags -t html {} \;
+#  -exec txt2tags -t html {} \;
+for file in `find . -name "*.t2t" | xargs`; do
+    txt2tags -t html $file
+done
