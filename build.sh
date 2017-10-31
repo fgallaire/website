@@ -9,5 +9,5 @@ git clone https://github.com/txt2tags/doc
 # 2) some files in doc fail to build, the loop seems to protect the global build
 
 for file in `find . -name "*.t2t" | xargs`; do
-    txt2tags -t html $file
+    txt2tags -t aatw $file
 done
