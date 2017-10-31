@@ -8451,7 +8451,7 @@ def doHeader(headers, config):
     # Expand macros on *all* lines of the template
     template = map(MacroMaster(config=config).expand, template)
     # Add Body contents to template data
-    for line in config['fullBody']: print type(line)
+    #for line in config['fullBody']: print type(line)
     head_data['BODY'] = '\n'.join(config['fullBody'])
     # Populate template with data (dict expansion)
     template = '\n'.join(template) % head_data
