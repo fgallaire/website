@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git clone https://github.com/txt2tags/doc
+#git clone https://github.com/txt2tags/doc
 
 # Should be:
 # find . -name '*.t2t' | xargs -n 1 txt2tags
